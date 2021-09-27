@@ -1,0 +1,29 @@
+Program 1C: Determine the Nesting Depth
+Description
+Given the sequence of keywords, one per line,  determine the most deeply nested BEGIN/END pair.  For example, the input
+
+begin begin begin end end end
+^D
+would output "Max is 3" because there are three pairs, triply nested. However, the input:
+
+begin end begin end begin end
+^D
+would output "Max is 1" because there are three pairs but they are not nested.
+
+Note, if you use "string x" and "cin << x;" then it treats the whitespace the same so the input could be:
+
+begin
+end
+begin
+begin
+end
+end
+^D
+(Which, btw, the output would be "Max is 2" since the deepest nest is the last two, doubly nested pairs.)
+
+HINT:  You can solve this by maintaining your own stack, the recursive solution is much easier (my solution was about 10 lines of code). Plus we haven't covered stacks yet :-)
+
+Requirements: In addition to the usual grading rubric, the assignment will be based on its functional correctness and its efficiency.  Specifically,
+
+There is a simple, 8-line recursive solution.  However, there are non-recursive solutions as well.  The choice of algorithm is up to the student.
+For this assignment, you do not need to check for errors.  You can assume the input is legal (only "begin", "end", and whitespace) and conforming (for example, starting with an "end" is not conforming).
