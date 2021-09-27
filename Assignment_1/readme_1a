@@ -1,0 +1,45 @@
+Program 1A: Simple Control-Break
+Description
+Based on the imperative idiom explored in class that was used to sum a list of integers from the standard input, create a program that performs a control-break with sub-totals and a grand total.  The output should include a header as well as a blank line after a sub-total and before the grand total.
+
+The input consists of two columns of integers in sorted order.  The first column is an account number and the second number is a dollar amount.  (An account number is a unique 5-digit integer that associates each dollar amount, with no dollar sign or cents, associated with an expense for the account number on the same line.)  The input is always in sorted order (lowest account numbers first and ends with the highest account number).
+
+The output is a header ("Account Number  Expense") followed by all of the expenses associated with one account, then a sub-total, a blank line, and then all of the expenses associated with the next account, sub-total, etc.  After the last account and its sub-total, there is a blank line and then the grand total of all expenses.
+
+For example, the input:
+
+12345     52
+12345     98
+12345     3
+12345     256
+22789     6
+22789     64
+35468     784
+35468     2
+35468     133
+^D
+would output:
+
+Account Number     Expense
+---------------------------
+12345              52
+12345              98
+12345              3
+12345              256
+sub-total = 409
+
+22789              6
+22789              64
+sub-total = 70
+
+35468              784
+35468              2
+35468              133
+sub-total = 919
+
+grand-total = 1398
+Requirements: In addition to the usual grading rubric, the assignment will be based on its functional correctness and its efficiency.  Specifically,
+
+There is no need to store all of the expenses and an efficient solution will not use an array or vector.
+The solution must correctly calculate the subtotals and grand total.
+The correct columns and row must be produced (account and expenditures; headers and subheadings).
