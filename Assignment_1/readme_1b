@@ -1,0 +1,28 @@
+Program 1B:  Last N-elements of a Sequence
+Description
+Returning to the imperative idiom explored in class, modify the the code so that, in addition to summing all of the integers, the program satisfies the following requirements:
+
+Count the number of inputs and out the number of integers on the same line as the sum.
+Keep track of the last three inputs.  Output them (in order: antepenultimate, penultimate, and ultimate) after the sum, one per line.
+Memory requirements limit the use of storage to a small, fixed number of integers.  This prohibits the program from storing all of the input.
+For example, input:
+
+1
+5
+32
+6
+12
+^D
+would output
+
+number-of-inputs = 5    sum = 56
+32
+6
+12
+ 
+
+Requirements: In addition to the usual grading rubric, the assignment will be based on its functional correctness and its efficiency.  Specifically,
+
+There is no need to store every integer and an efficient solution will not.  However, you may use an array or vector to store some of the values.  This array must be constrained to be proportional to N and not the total number of integers.
+The solution must correctly calculate the subtotals and grand total.
+The correct columns and row must be produced (account and expenditures; headers and subheadings).
